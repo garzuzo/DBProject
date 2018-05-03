@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2CF03A51-B985-352D-A48B-D568FEA6CA3F" name="Danio">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>90D54117-BC4C-2724-3FD3-7A70F833B1E4</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="013F5A57-7E1D-5A6D-70FA-95DE4CCB58F8">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>EB44C251-957D-A9D0-8F47-80E445BC2B62</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descricion_problema" id="8663D2E3-DCBA-E7E8-E13B-585456F17ED5">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>6EB37EBE-65BA-CDA4-9125-5CF4D1EC5083</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo_Anomalia_id" id="0D3CCFD0-C34C-56D1-F034-84187286FA23">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>B1BC9D63-BB03-FB3B-FE84-2274A19FA019</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09540041-2D18-B9E6-5A92-2870D4D3F2F7" referredColumn="21ED20EE-759F-8E88-638C-C8E7FCDA4130"/>
+</associations>
+</Column>
+<Column name="solicitud_id" id="42A6D734-252C-13E4-2B3E-C0AB31646D12">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>3C922B0B-2BC9-195F-CA11-F51ACD3620AA</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B164F8A3-EE81-C289-394E-D34F43148143" referredColumn="D9BBA7AB-E5E8-ACED-57A3-F1077CF5B631"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE091C6B-B12F-8692-C45C-86598FC9E031" name="Danio_PK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>84C2E2E3-164F-8D0B-B388-49A552285460</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="013F5A57-7E1D-5A6D-70FA-95DE4CCB58F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40C2B1B4-B202-EA44-9347-C98D469EC56C" name="Danio__IDX">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>A6610558-BEE4-39DF-DEC0-E62179CDCB35</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="42A6D734-252C-13E4-2B3E-C0AB31646D12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="331643C8-4F05-2494-AF6D-4E5CC616FB21" name="Danio_solicitud_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>A6610558-BEE4-39DF-DEC0-E62179CDCB35</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42A6D734-252C-13E4-2B3E-C0AB31646D12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7451E04B-614C-FA42-7093-04D25BC8183D" name="Danio_Tipo_Anomalia_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>7BE0DBA7-1359-5B33-53D4-9F75203FE665</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D3CCFD0-C34C-56D1-F034-84187286FA23"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

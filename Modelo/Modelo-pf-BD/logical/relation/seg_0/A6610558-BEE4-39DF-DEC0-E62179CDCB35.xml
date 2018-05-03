@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="solicitud-danio" directorySegmentName="seg_0" id="A6610558-BEE4-39DF-DEC0-E62179CDCB35">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:26:09 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+</engineerTo>
+<sourcePk>44F021C0-FC75-9EC0-6FF8-E44825C1D407</sourcePk>
+<targetPk>84C2E2E3-164F-8D0B-B388-49A552285460</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D4F6FCF7-E8D0-7C1F-30BB-2803A8705C4C</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>90D54117-BC4C-2724-3FD3-7A70F833B1E4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

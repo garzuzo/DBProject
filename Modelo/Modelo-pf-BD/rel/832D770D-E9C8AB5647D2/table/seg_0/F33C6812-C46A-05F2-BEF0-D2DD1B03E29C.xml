@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F33C6812-C46A-05F2-BEF0-D2DD1B03E29C" name="solicitud">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>D4F6FCF7-E8D0-7C1F-30BB-2803A8705C4C</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="D9BBA7AB-E5E8-ACED-57A3-F1077CF5B631">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>9B8183FB-E7B8-75C1-598D-995AACCD1A0C</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="observacion" id="B853B4DB-0742-BC96-0C20-3C68A9B58337">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>D5BA12AB-FD99-7B8D-E3C7-0F0DC336AFE0</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_solicitud" id="36721A5B-864C-5E3D-67C7-F3ACB51D6828">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>557B081F-9F96-ED9A-C47F-F453BC1021F4</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_atencion" id="5249C7B3-A945-C965-9362-1A03211A603C">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>EEB16CA5-EC9B-5875-CF1D-C0C303B1CBFB</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_atencion" id="6F2A55C9-F6B4-5446-28B1-E267A2BECF4D">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>0158F82F-D8C9-E605-8B0C-79B73BCF0B95</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cliente_cedula" id="3221A310-803C-D612-44CF-2DC4615B5FC9">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>E89E770B-64CE-E9E4-7078-56466E61FD3A</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F5B5251-AB28-DAB2-A471-EFE755E3875E" referredColumn="53F1CC2C-33EF-6233-4CC4-EF0653D85002"/>
+</associations>
+</Column>
+<Column name="TipoSolicitud_id" id="3286AB5B-797D-20D5-88EF-1D0325DAD4A5">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>FA1AC989-43EB-0B5B-5C35-44E877A81A32</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A137C2DE-1DDE-5FB3-DB20-BEEAA90F6C4B" referredColumn="69DE1328-8122-BB54-26D4-72A22B02F69F"/>
+</associations>
+</Column>
+<Column name="funcionario_id" id="806A41FE-31FF-04C7-7889-39A79FFF7F04">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>A5B15C25-4749-D207-B1A9-D411F52C5AC7</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4D38DC28-FA09-DC5E-2446-252A9936A6D9" referredColumn="C9CC4DA5-C4D4-53D7-54A2-5A7190F09A0A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5CBB91F3-F8C8-7E65-0D77-C4D7F845575E" name="solicitud_PK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>44F021C0-FC75-9EC0-6FF8-E44825C1D407</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9BBA7AB-E5E8-ACED-57A3-F1077CF5B631"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EC14F55-1C9E-7F6A-40B6-A698BC6CC0E5" name="solicitud_Cliente_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>1F9AAEF8-0E5E-A7D3-0FF9-8944CABE1549</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3221A310-803C-D612-44CF-2DC4615B5FC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45650FF0-0003-B88C-00A9-F6881E18B5A8" name="solicitud_funcionario_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>B117D0F7-9626-2641-EB58-D727FBE85465</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="806A41FE-31FF-04C7-7889-39A79FFF7F04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32FAF319-4889-336A-CC61-12291900333B" name="solicitud_TipoSolicitud_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>C4568DB3-176B-626D-3F7F-7BD336A29A29</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3286AB5B-797D-20D5-88EF-1D0325DAD4A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

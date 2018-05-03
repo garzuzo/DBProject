@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="solicitud-tipo_solicitud" directorySegmentName="seg_0" id="C4568DB3-176B-626D-3F7F-7BD336A29A29">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:24:28 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+</engineerTo>
+<sourcePk>A68D16FD-9F45-9C58-1150-BA3F78AC0AED</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8993A904-2AEB-B480-87AB-67A82934C218</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D4F6FCF7-E8D0-7C1F-30BB-2803A8705C4C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

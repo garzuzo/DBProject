@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="976EFFA3-028A-2855-EE75-E02F5C25F6E2" name="Producto">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>B31DFFAC-6A16-E22E-BFA6-D85BD20609BF</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2699904B-45DA-3659-1558-5A0E71B63E73">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>A9D696DE-69F0-8E45-7173-2258126290EF</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inicio" id="8B1521E8-BEC5-2147-E558-0EAF7FED09E0">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>70EE575E-8467-F71F-918E-95B479332E0F</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_retiro" id="F3EA82CD-F34F-6BE6-D4DC-6420AE0767AE">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>131861B6-908B-E27E-CAE6-8262766C67E2</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_producto" id="7353C07C-9E22-BB3E-090A-EF5351CF648C">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>B5EF93C9-EB48-90CB-53E6-31AFB6795AC0</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cliente_cedula" id="2FA517C2-1DF9-A0BD-06A4-8E25D012AB80">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>C7F7AB2E-78F9-A214-70A2-4B5DA5DEE0AB</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7A498C97-8BEA-020D-BD35-DCB0825B04CC" referredColumn="53F1CC2C-33EF-6233-4CC4-EF0653D85002"/>
+</associations>
+</Column>
+<Column name="tipo_producto_id" id="846D551A-1300-B36E-3DEC-C9EBB07C0236">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>B4C01CDA-ABA1-0706-981E-4040C6FD8A99</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A705363-D64D-71F8-B819-95BF9651EB99" referredColumn="6FD0DBCC-D547-AC03-0D61-526DDADBB956"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F6663F9-12BC-B810-3C6E-8F25DF0EDCDE" name="Producto_PK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>BB1176E4-29FC-87B9-F149-29653200E53F</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2699904B-45DA-3659-1558-5A0E71B63E73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21FE2852-82FC-505E-5F45-4F0760D64E86" name="Producto_Cliente_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>C1859A43-BE77-AD9B-98BC-ABB0DA2EB121</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2FA517C2-1DF9-A0BD-06A4-8E25D012AB80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AE95F8B-DDD4-AEFE-D349-BC0D809B44D5" name="Producto_tipo_producto_FK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:36:55 UTC</createdTime>
+<generatorID>572E2382-55EC-6E17-D95C-E311075CAB2D</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="846D551A-1300-B36E-3DEC-C9EBB07C0236"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -79,5 +79,5 @@ END fBuscarProducto;
 END pkProducto;
 /
 
-EXECUTE pkProducto.pInsertar(1234 NUMBER, 10-03-15,  10-06-15, 'activo');
+EXECUTE pkProducto.pInsertar(1234, 10-03-15,  10-06-15, 'activo');
 

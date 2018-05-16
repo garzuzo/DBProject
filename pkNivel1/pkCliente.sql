@@ -1,52 +1,58 @@
 
 CREATE OR REPLACE PACKAGE pkCliente AS
-PROCEDURE insertar(cedula NUMBER, nombre VARCHAR2, direccion VARCHAR2);
-PROCEDURE eliminar(cedula NUMBER);
-PROCEDURE actualizarNombre(cedula NUMBER, nombre VARCHAR2);
-PROCEDURE actualizarDireccion(cedula NUMBER, direccion VARCHAR2);
-FUNCTION  buscarCliente(cedula NUMBER) RETURN cliente%rowtype;
+PROCEDURE pInsertar(cedula NUMBER, nombre VARCHAR2, direccion VARCHAR2);
+PROCEDURE pEliminar(cedula NUMBER);
+PROCEDURE pActualizarNombre(cedula NUMBER, nombre VARCHAR2);
+PROCEDURE pActualizarDireccion(cedula NUMBER, direccion VARCHAR2);
+FUNCTION  fBuscarCliente(cedula NUMBER) RETURN cliente%rowtype;
 END pkCliente;
 /
 CREATE OR REPLACE PACKAGE BODY pkCliente AS
 
-PROCEDURE insertar(cedula NUMBER, nombre VARCHAR2, direccion VARCHAR2) IS
+PROCEDURE pInsertar(cedula NUMBER, nombre VARCHAR2, direccion VARCHAR2) IS
 BEGIN 
 INSERT INTO Cliente VALUES(cedula, nombre, direccion);
---EXCEPTION
---WHEN OTHERS THEN
---    raise_application_error(-20000, 'Error insertando en tabla Cliente' || ERRMSG);
-END insertar;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLCODE);
+END pInsertar;
 
-PROCEDURE eliminar(cedula NUMBER) IS
+PROCEDURE pEliminar(cedula NUMBER) IS
 BEGIN
 DELETE FROM Cliente c WHERE c.cedula = cedula;
-END eliminar;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al eliminar en la tabla Cliente.'||SQLCODE);
+END pEliminar;
 
-PROCEDURE actualizarNombre(cedula NUMBER, nombre VARCHAR2) IS
+PROCEDURE pActualizarNombre(cedula NUMBER, nombre VARCHAR2) IS
 BEGIN
 UPDATE Cliente c SET c.nombre = nombre WHERE c.cedula= cedula;
-END actualizarNombre;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al actualizar el nombre de un registro en la tabla Cliente.'||SQLCODE);
+END pActualizarNombre;
 
-PROCEDURE actualizarDireccion(cedula NUMBER,direccion VARCHAR2) IS
+PROCEDURE pActualizarDireccion(cedula NUMBER,direccion VARCHAR2) IS
 BEGIN
 UPDATE Cliente c SET c.direccion = direccion WHERE c.cedula=cedula;
-END actualizarDireccion;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al actualizar la dirección de un registro en la tabla Cliente.'||SQLCODE);
+END pActualizarDireccion;
 
-
-
---TODO: fix rowtype
-FUNCTION buscarCliente(cedula NUMBER) RETURN cliente%rowtype   IS
---DECLARACION VARIABLES
---datosCliente VARCHAR2(200);
+FUNCTION fBuscarCliente(cedula NUMBER) RETURN cliente%rowtype   IS
 cli cliente%rowtype;
 BEGIN
 SELECT * into cli
 FROM Cliente c
 WHERE c.cedula=cedula;
-
 RETURN cli;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al consultar un registro en la tabla Cliente.'||SQLCODE);
 
-END buscarCliente;
+END fBuscarCliente;
 
 END pkCliente;
 /

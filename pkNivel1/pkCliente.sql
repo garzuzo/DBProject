@@ -14,7 +14,7 @@ BEGIN
 INSERT INTO Cliente VALUES(cedula, nombre, direccion);
 EXCEPTION
 WHEN OTHERS THEN
-RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLCODE);
+RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);
 END pInsertar;
 
 PROCEDURE pEliminar(cedula NUMBER) IS
@@ -50,12 +50,9 @@ WHERE c.cedula=cedula;
 RETURN cli;
 EXCEPTION
 WHEN OTHERS THEN
-RAISE_APPLICATION_ERROR(-20000,'Error al consultar un registro en la tabla Cliente.'||SQLCODE);
+RAISE_APPLICATION_ERROR(-20000,'Error al consultar un registro en la tabla Cliente.'||SQLERRM);
 
 END fBuscarCliente;
 
 END pkCliente;
 /
-
-EXECUTE pkCliente.insertar(1234, 'Sandra', 'aqui');
-

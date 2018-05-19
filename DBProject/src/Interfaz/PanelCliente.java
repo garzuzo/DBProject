@@ -16,7 +16,7 @@ public class PanelCliente extends JPanel implements ActionListener{
 	public PanelCliente(InterfazPrincipal i) {
 		interfaz=i;
 		setLayout(new BorderLayout());
-		
+		setSize(250,250);
 		JPanel pAux= new JPanel(new GridLayout(3,2));
 		pAux.add(new JLabel("Cédula"));
 		

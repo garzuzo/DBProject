@@ -50,20 +50,25 @@ public class JFRegistro extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getActionCommand().equals("seleccionar")) {
+			System.out.println(1);
 			if(rbRegistroCliente.isSelected()) {
 				pCliente=new PanelCliente(interfaz);
-				add(pCliente, BorderLayout.CENTER);
+				this.add(pCliente, BorderLayout.CENTER);
+				pCliente.repaint();
+				//pCliente.setVisible(true);
+				System.out.println(2);
 			}
 			else {
 				pSolicitud=new PanelSolicitud();
 				add(pSolicitud, BorderLayout.CENTER);
+				System.out.println(3);
 			}	
 		}
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		JFRegistro jf=new JFRegistro();
+//		JFRegistro jf=new JFRegistro(interfaz);
 //		jf.setVisible(true);
 //		jf.setSize(500,700);
 	}

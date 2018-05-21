@@ -1,101 +1,180 @@
-Create or replace PACKAGE pkSolicitud  as
 
-Procedure pInsertarSolicitud(id IN SOLICITUD.iD%type, Observacion IN SOLICITUD.observacion%type, fecha_solicitud IN SOLICITUD. fecha_solicitud%type,
-fecha_atencion IN SOLICITUD.fecha_atencion);
+Package PKSOLICITUD compilado
 
+Errores: comprobar log de compilador
 
-Procedure pmodificarSolicitud(id IN SOLICITUD.iD%type, Observacion IN SOLICITUD.observacion%type, fecha_solicitud IN SOLICITUD. fecha_solicitud%type,
-fecha_atencion IN SOLICITUD.fecha_atencion, estado IN SOLICITUD.estado%type);
+Package Body PKSOLICITUD compilado
 
+Errores: comprobar log de compilador
 
-FUNCTION fConsultarSolicitud(iId in SOLICITUD.id%type) RETURN SOLICITUD%rowtype ;
-      
+Package PKSOLICITUD compilado
 
-PROCEDURE pEliminarSolicitud (iId in SOLICITUD.id%type);
+Errores: comprobar log de compilador
 
+Package Body PKSOLICITUD compilado
 
-end pkSolicitud;
+Errores: comprobar log de compilador
 
+Package PKSOLICITUD compilado
 
+Errores: comprobar log de compilador
 
+Package Body PKSOLICITUD compilado
 
+Errores: comprobar log de compilador
 
-/** BODY---PACKAGE**/
-
-Create or Replace package body  pkSolicitud as 
-
-
-/*INSERTAR SOLICITUD*/
-Procedure pInsertarSolicitud(id IN SOLICITUD.iD%type, Observacion IN SOLICITUD.observacion%type, fecha_solicitud IN SOLICITUD. fecha_solicitud%type,
-fecha_atencion IN SOLICITUD.fecha_atencion, estado IN SOLICITUD.estado%type) is 
-BEGIN 
-INSERt INTO CONDUCTOR VALUES (id,Observacion,fecha_solicitud,fecha_atencion,estado);
+Package PKSOLICITUD compilado
 
 
-        EXCEPTION
-            WHEN DUP_VAL_ON_INDEX THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error, este registro ya existe.');
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error desconocido.'||SQLCODE||SQLERRM );
+Package Body PKSOLICITUD compilado
 
-end pInsertarSolicitud;
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
 
 
+Package Body PKSOLICITUD compilado
 
-/*ACTUALIZAR SOLICITUD*/
-Procedure pmodificarSolicitud(Sid IN SOLICITUD.iD%type, SObservacion IN SOLICITUD.observacion%type, Sfecha_solicitud IN SOLICITUD.fecha_solicitud%type,
-Sfecha_atencion IN SOLICITUD.fecha_atencion, Sestado IN SOLICITUD.estado%type) is 
-BEGIN 
+Errores: comprobar log de compilador
 
- UPDATE Solicitud
-        
-        SET 
-        observacion = SObservacion,
-        fecha_solicitud = TO_DATE(Sfecha_solicitud, 'YYYY-MM-DD'),
-        fecha_atencion=TO_DATE(Sfecha_atencion, 'YYYY-MM-DD'),
-        estado=Sestado
-        where SID =id;
-        
-
-        EXCEPTION
-            WHEN DUP_VAL_ON_INDEX THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error, este registro ya existe.');
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error desconocido.'||SQLCODE||SQLERRM );
-end pmodificarSolicitud;
+Package PKSOLICITUD compilado
 
 
-/*ELIMINAR SOLICITUD*/
+Package Body PKSOLICITUD compilado
 
- PROCEDURE pEliminarSolicitud (iId in SOLICITUD.id%type) IS
-    BEGIN
-        DELETE FROM SOLCICITUD WHERE id = iId;
-        EXCEPTION
-            WHEN NO_DATA_FOUND THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error, No existe una solicitu con ese id.');
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error desconocido.');
-    END pEliminarSolicitud;
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
 
 
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
 
 
-/** consultar Solicitud?*/
+Package Body PKSOLICITUD compilado
 
- FUNCTION fConsultarSolicitud(iId in SOLICITUD.id%type) RETURN SOLICITUD%rowtype IS
-        rcsolicitud SOLICITUD%rowtype;
-    BEGIN
-        SELECT *  into rcsolicitud FROM SOLICITUD  WHERE id = iId;
-        RETURN rcsolicitud;
-        EXCEPTION
-            WHEN NO_DATA_FOUND THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error, No existe una solicitud con este id.');
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20001,'Error desconocido.');
-    END fConsultarSolicitud;
+Errores: comprobar log de compilador
 
-end pkSolicitud;
+Package PKSOLICITUD compilado
 
 
+Package Body PKSOLICITUD compilado
 
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Error que empieza en la línea: 3 del comando :
+Procedure pInsertarSolicitud(id NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado VARCHAR, cliente NUMBER,tipo_solicitud NUMBER,funcionario NUMBER)
+Informe de error -
+Comando desconocido
+
+
+Error que empieza en la línea: 5 del comando :
+Procedure pmodificarSolicitud(id NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado VARCHAR, cliente NUMBER,tipo_solicitud NUMBER,funcionario NUMBER)
+Informe de error -
+Comando desconocido
+
+
+Error que empieza en la línea: 7 del comando :
+Procedure pEliminarSolicitud (id NUMBER)
+Informe de error -
+Comando desconocido
+
+
+Error que empieza en la línea: 9 del comando :
+end pkSolicitud
+Informe de error -
+Comando desconocido
+
+SP2-0044: Para obtener una lista de comandos conocidos, introduzca HELP
+y para salir, EXIT.
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+Errores: comprobar log de compilador
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
+
+
+Package PKSOLICITUD compilado
+
+
+Package Body PKSOLICITUD compilado
 

@@ -18,7 +18,7 @@ public class PanelCliente extends JPanel implements ActionListener{
 		setLayout(new BorderLayout());
 		setSize(250,250);
 		JPanel pAux= new JPanel(new GridLayout(3,2));
-		pAux.add(new JLabel("Cédula"));
+		pAux.add(new JLabel("Cedula"));
 		
 		txtCedula=new JTextField();
 		pAux.add(txtCedula);
@@ -28,7 +28,7 @@ public class PanelCliente extends JPanel implements ActionListener{
 		txtNombre=new JTextField();
 		pAux.add(txtNombre);
 		
-		pAux.add(new JLabel("Dirección"));
+		pAux.add(new JLabel("Direccion"));
 		
 		txtDir=new JTextField();
 		pAux.add(txtDir);

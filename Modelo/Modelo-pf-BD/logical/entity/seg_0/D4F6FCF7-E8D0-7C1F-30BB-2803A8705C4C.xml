@@ -4,7 +4,7 @@
 <createdTime>2018-04-30 18:35:38 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2018-04-30 18:36:42 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2018-04-30 18:37:24 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -47,7 +47,7 @@
 <createdTime>2018-04-30 18:56:10 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,7 +59,7 @@
 <createdTime>2018-04-30 18:57:35 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -72,7 +72,7 @@
 <createdTime>2018-04-30 18:57:53 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -86,14 +86,14 @@
 <generatorID>1F9AAEF8-0E5E-A7D3-0FF9-8944CABE1549</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <referedAttribute>3C0BE4CE-6B5B-6DFF-EFDD-AD96CBEEEDB2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id1" id="FA1AC989-43EB-0B5B-5C35-44E877A81A32">
 <createdBy>Juan</createdBy>
@@ -101,14 +101,14 @@
 <generatorID>C4568DB3-176B-626D-3F7F-7BD336A29A29</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <referedAttribute>98CD04D5-FE00-6D47-51B2-271EE8669913</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id2" id="A5B15C25-4749-D207-B1A9-D411F52C5AC7">
 <createdBy>Juan</createdBy>
@@ -116,9 +116,24 @@
 <generatorID>B117D0F7-9626-2641-EB58-D727FBE85465</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <referedAttribute>711DE53F-E7D9-6478-7AC0-C4656C19E205</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id3" id="ABF02E8D-6469-CACA-D41B-C0F831C8694D">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:55:28 UTC</createdTime>
+<generatorID>B4F7D0F7-32A2-8CF0-C915-B9048760C3FF</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+</engineerTo>
+<referedAttribute>A9D696DE-69F0-8E45-7173-2258126290EF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -132,7 +147,7 @@
 <createdTime>2018-04-30 18:37:22 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

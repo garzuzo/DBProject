@@ -4,7 +4,7 @@
 <createdTime>2018-04-30 18:27:49 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2018-04-30 18:28:32 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2018-04-30 18:28:53 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,13 +46,40 @@
 <createdTime>2018-04-30 18:30:25 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaNacimiento" id="1FD59120-5EBB-B778-190C-B3A0CEDE4E85">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:50:10 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="F58A36EC-57FD-E867-2CB2-AE0C35E50DA7">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:50:26 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -61,7 +88,7 @@
 <createdTime>2018-04-30 18:28:45 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

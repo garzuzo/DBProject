@@ -19,4 +19,16 @@ PROCEDURE pSolicitudDanosReclamos(idTSol NUMBER, nomTSol varchar);
 
 PROCEDURE pAsignarSolicitudAFuncionario(id solicitud);
 
+----Encontrar el funcionario disponible para asignarlo a una solicitud
+
+FUNCTION funcionariosDisponibles RETURN FUNCIONARIO.id IS
+         idFuncionario number;
+    BEGIN
+          SELECT * into idFuncionario FROM FUNCIONARIO fun, SOLICITUD sol WHERE fun.id=sol.funcionarioId AND rownum<3;
+          RETURN idFuncionario;
+            
+    
+END funcionariosDisponibles;
+
+
 END pkAsignacionNivel2;

@@ -4,7 +4,7 @@
 <createdTime>2018-04-30 19:12:39 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,12 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="A9D696DE-69F0-8E45-7173-2258126290EF">
+<Attribute name="id_producto" id="A9D696DE-69F0-8E45-7173-2258126290EF">
 <createdBy>Juan</createdBy>
 <createdTime>2018-04-30 19:12:48 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2018-04-30 19:13:00 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2018-04-30 19:13:52 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -58,7 +58,7 @@
 <createdTime>2018-04-30 19:14:07 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -72,7 +72,7 @@
 <generatorID>C1859A43-BE77-AD9B-98BC-ABB0DA2EB121</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <referedAttribute>3C0BE4CE-6B5B-6DFF-EFDD-AD96CBEEEDB2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -81,13 +81,13 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="B4C01CDA-ABA1-0706-981E-4040C6FD8A99">
+<Attribute name="id_tipo_producto" id="B4C01CDA-ABA1-0706-981E-4040C6FD8A99">
 <createdBy>Juan</createdBy>
 <createdTime>2018-04-30 19:33:27 UTC</createdTime>
 <generatorID>572E2382-55EC-6E17-D95C-E311075CAB2D</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <referedAttribute>897B7512-C42D-1615-2E85-23797DE5390F</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -96,22 +96,6 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id2" id="1E220FFE-B368-56D2-5204-EEA25F7A3CDD">
-<createdBy>sami_</createdBy>
-<createdTime>2018-05-22 01:51:16 UTC</createdTime>
-<generatorID>5F1E1D7A-A7B7-9C10-C11C-DE80066FA634</generatorID>
-<ownerDesignName>Modelo-pf-BD</ownerDesignName>
-<engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>A9D696DE-69F0-8E45-7173-2258126290EF</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="BB1176E4-29FC-87B9-F149-29653200E53F" name="Producto PK">
@@ -119,7 +103,7 @@
 <createdTime>2018-04-30 19:12:57 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

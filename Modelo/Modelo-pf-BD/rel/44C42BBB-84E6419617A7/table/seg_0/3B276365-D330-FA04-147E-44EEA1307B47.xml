@@ -1,0 +1,194 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3B276365-D330-FA04-147E-44EEA1307B47" name="solicitud">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>D4F6FCF7-E8D0-7C1F-30BB-2803A8705C4C</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_solicitud" id="941998FA-DDCD-FE1C-FE46-0D524B1244A9">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>9B8183FB-E7B8-75C1-598D-995AACCD1A0C</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="observacion" id="EC305903-8072-36B2-1C2C-9C9CF416C534">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>D5BA12AB-FD99-7B8D-E3C7-0F0DC336AFE0</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_solicitud" id="8F2722A4-533F-571A-2749-9926004AB119">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>557B081F-9F96-ED9A-C47F-F453BC1021F4</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_atencion" id="1CD022C7-1B1D-76D0-3C2E-744687766466">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>EEB16CA5-EC9B-5875-CF1D-C0C303B1CBFB</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado_atencion" id="C5A2892A-9078-7F0F-0512-9C15D70108E6">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>0158F82F-D8C9-E605-8B0C-79B73BCF0B95</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cliente_cedula" id="A71608A1-EF98-13D2-67C2-2F47A4318CB0">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>E89E770B-64CE-E9E4-7078-56466E61FD3A</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E4BD24E5-6BF8-1292-D538-20AA2CC2A3E5" referredColumn="7A0AB89F-E2B9-049C-43B2-33B6C587805B"/>
+</associations>
+</Column>
+<Column name="TipoSolicitud_id_tipo_s" id="F34384C6-E1F2-3C6D-9385-D7DA517DADF6">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>FA1AC989-43EB-0B5B-5C35-44E877A81A32</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2F2481B-04A4-EF16-A35E-836175ABA2CD" referredColumn="09466F11-81F8-A4F0-DEB8-44721FB9AFF9"/>
+</associations>
+</Column>
+<Column name="funcionario_id_funcionario" id="B53CF04F-3B1C-7E32-D9C2-A8B28866BE56">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>A5B15C25-4749-D207-B1A9-D411F52C5AC7</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E01603E9-B15A-D8EF-7E37-7A5BA68E5AD6" referredColumn="9A5E0DB8-A3BA-78C3-4F3B-6AC4B128FF8F"/>
+</associations>
+</Column>
+<Column name="Producto_id_producto" id="2333A059-8BED-385C-305A-698B3E19C288">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>ABF02E8D-6469-CACA-D41B-C0F831C8694D</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D22C858-83DF-E602-535E-C364E3AFAA4F" referredColumn="5DC8152D-5AA4-0EE4-0063-FC80E90F3664"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DAE5BFCB-98A8-1633-4E99-140B4A5F5E15" name="solicitud_PK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>44F021C0-FC75-9EC0-6FF8-E44825C1D407</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="941998FA-DDCD-FE1C-FE46-0D524B1244A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB1616B5-173A-05D2-F1FA-7654B6A2D49F" name="solicitud_Cliente_FK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>1F9AAEF8-0E5E-A7D3-0FF9-8944CABE1549</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A71608A1-EF98-13D2-67C2-2F47A4318CB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B30FFD25-8CEA-217A-FA0C-5E28928AC739" name="solicitud_funcionario_FK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>B117D0F7-9626-2641-EB58-D727FBE85465</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B53CF04F-3B1C-7E32-D9C2-A8B28866BE56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8CE2B85-00D4-56AD-6D02-5D04EC51AEDB" name="solicitud_Producto_FK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>B4F7D0F7-32A2-8CF0-C915-B9048760C3FF</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2333A059-8BED-385C-305A-698B3E19C288"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8DC17DA-EA8A-93E3-6CD2-670706A1A9FC" name="solicitud_TipoSolicitud_FK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>C4568DB3-176B-626D-3F7F-7BD336A29A29</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F34384C6-E1F2-3C6D-9385-D7DA517DADF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

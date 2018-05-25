@@ -4,7 +4,7 @@
 <createdTime>2018-04-30 19:08:34 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,12 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="EB44C251-957D-A9D0-8F47-80E445BC2B62">
+<Attribute name="id_danio" id="EB44C251-957D-A9D0-8F47-80E445BC2B62">
 <createdBy>Juan</createdBy>
 <createdTime>2018-04-30 19:08:45 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2018-04-30 19:08:48 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -41,35 +41,35 @@
 <dataTypeSize>500 CHAR</dataTypeSize>
 <ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id2" id="B1BC9D63-BB03-FB3B-FE84-2274A19FA019">
+<Attribute name="id_tipo_anomalia" id="B1BC9D63-BB03-FB3B-FE84-2274A19FA019">
 <createdBy>Juan</createdBy>
 <createdTime>2018-04-30 19:33:48 UTC</createdTime>
 <generatorID>7BE0DBA7-1359-5B33-53D4-9F75203FE665</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <referedAttribute>1F5606B0-4BBF-D1BC-54BB-0DE3F0B0B0E7</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="3C922B0B-2BC9-195F-CA11-F51ACD3620AA">
+<Attribute name="id_solicitud" id="3C922B0B-2BC9-195F-CA11-F51ACD3620AA">
 <createdBy>Juan</createdBy>
 <createdTime>2018-04-30 19:35:21 UTC</createdTime>
 <generatorID>A6610558-BEE4-39DF-DEC0-E62179CDCB35</generatorID>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <referedAttribute>9B8183FB-E7B8-75C1-598D-995AACCD1A0C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -78,7 +78,7 @@
 <createdTime>2018-04-30 19:09:00 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

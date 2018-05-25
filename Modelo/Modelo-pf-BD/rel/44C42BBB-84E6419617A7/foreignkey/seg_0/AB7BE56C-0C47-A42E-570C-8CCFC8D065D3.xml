@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AB7BE56C-0C47-A42E-570C-8CCFC8D065D3" containerWithKeyObject="26771C4B-C49A-FDAB-BE92-3EF6D2E664A7" localFKIndex="25F94AAE-2E53-0B30-948D-5F27586412F6" name="Danio_Tipo_Anomalia_FK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-25 23:05:53 UTC</createdTime>
+<generatorID>7BE0DBA7-1359-5B33-53D4-9F75203FE665</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<referredTableLongName>Tipo_Anomalia</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>68BD36E3-B138-C5E4-A837-132AA499396A</referredTableID>
+<keyObject>7FB1D5B5-F689-DA06-BEC3-4DB80A51B18D</keyObject>
+<referredKeyID>7FB1D5B5-F689-DA06-BEC3-4DB80A51B18D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_tipo_anomalia</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

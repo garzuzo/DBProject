@@ -4,7 +4,7 @@
 <createdTime>2018-04-30 18:27:49 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2018-04-30 18:28:32 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2018-04-30 18:28:53 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,7 +46,7 @@
 <createdTime>2018-04-30 18:30:25 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -54,12 +54,12 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fechaNacimiento" id="1FD59120-5EBB-B778-190C-B3A0CEDE4E85">
+<Attribute name="fecha_nacimiento" id="1FD59120-5EBB-B778-190C-B3A0CEDE4E85">
 <createdBy>sami_</createdBy>
 <createdTime>2018-05-22 01:50:10 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -72,7 +72,7 @@
 <createdTime>2018-05-22 01:50:26 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -88,7 +88,7 @@
 <createdTime>2018-04-30 18:28:45 UTC</createdTime>
 <ownerDesignName>Modelo-pf-BD</ownerDesignName>
 <engineerTo>
-<item key="13B822BC-DAE1-9597-142D-FDE7F8525A5F" value="true"/>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

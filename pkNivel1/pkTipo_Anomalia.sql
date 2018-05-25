@@ -19,11 +19,17 @@ END insertar;
 PROCEDURE eliminar(id NUMBER) IS
 BEGIN
 DELETE FROM TIPO_ANOMALIA t WHERE t.ID = id;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al eliminar en la tabla Cliente.'||SQLCODE);
 END eliminar;
 
 PROCEDURE actualizarNombreAnomalia(id NUMBER, nombre_Anomalia VARCHAR2) IS
 BEGIN
 UPDATE TIPO_ANOMALIA t SET t.NOMBRE_ANOMALIA = nombre_Anomalia WHERE t.ID= id;
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al actualizar el nombre de un registro en la tabla Cliente.'||SQLCODE);
 END actualizarNombreAnomalia;
 
 
@@ -41,7 +47,9 @@ FROM TIPO_ANOMALIA t
 WHERE t.ID=id;
 
 RETURN tip;
-
+EXCEPTION
+WHEN OTHERS THEN
+RAISE_APPLICATION_ERROR(-20000,'Error al consultar un registro en la tabla Cliente.'||SQLERRM);
 END buscarTipoAnomalia;
 
 END pkTipo_Anomalia;

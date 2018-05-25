@@ -16,7 +16,6 @@ BEGIN
     EXCEPTION
     WHEN OTHERS THEN
     RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);
-    END pEliminarTipoProducto;
 END pInsertarTipoSolicitud;
 
 --Metodo para consultar un tipo de solicitud existente en el sistema
@@ -29,7 +28,6 @@ BEGIN
     EXCEPTION
     WHEN OTHERS THEN
     RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);
-    END pEliminarTipoProducto;
 END fConsultarTipoSolicitud;
 
 --Metodo para modificar un tipo de solicitud existente en el sistema
@@ -41,8 +39,7 @@ BEGIN
 
     EXCEPTION
     WHEN OTHERS THEN
-    RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);
-    END pEliminarTipoProducto;
+    RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);    
 END pModififcarTipoSolicitud;
 
 --Metodo para eliminar un tipo de solicitud en el sistema
@@ -53,8 +50,6 @@ BEGIN
     EXCEPTION
     WHEN OTHERS THEN
     RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);
-    END pEliminarTipoProducto;
-END pEliminarTipoSolicitud;
 END pkTipoSolicitud;
 
 

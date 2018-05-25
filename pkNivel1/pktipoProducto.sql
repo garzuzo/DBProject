@@ -45,7 +45,7 @@ BEGIN
     EXCEPTION
     WHEN OTHERS THEN
     RAISE_APPLICATION_ERROR(-20000,'Error al insertar en la tabla Cliente.'||SQLERRM);
-    END pEliminarTipoProducto;
+END pEliminarTipoProducto;
 END pktipoProducto;
 
 --pruebas procedimientos

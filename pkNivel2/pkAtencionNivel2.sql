@@ -9,7 +9,38 @@ END pkAtencionNivel2;
 CREATE OR REPLACE PACKAGE BODY pkAtencionNivel2 AS -- creacion cuerpo del paquete
 
 --Procedimiento para atender una solicitud de nuevo producto
-PROCEDURE pSolicitudNuevoProducto(idTSol NUMBER, nomTSol varchar);
+PROCEDURE pSolicitudNuevoProducto(idProduct NUMBER, FechaInicio Date, FechaRetiro Date, EstadoProducto varchar, Cliente NUMBER,TpoProducto NUMBER);
+
+      Begin
+
+        IF idProduct IS NULL THEN
+           RAISE_APPLICATION_ERROR(-20001, 'Ingrese un id  válido');   
+        END IF;
+        
+        IF FechaInicio  IS NULL THEN
+            RAISE_APPLICATION_ERROR(-20001, 'Ingrese un id  válido');  
+        END IF ;
+        
+        IF FechaRetiro  IS NULL THEN
+            RAISE_APPLICATION_ERROR(-20001, 'Ingrese un id  válido');  
+        END IF; 
+        
+         IF EstadoProducto  IS NULL THEN
+            RAISE_APPLICATION_ERROR(-20001, 'Ingrese un id  válido');  
+        END IF;
+        
+        IF Cliente  IS NULL THEN
+            RAISE_APPLICATION_ERROR(-20001, 'Ingrese un id  válido');  
+        END IF;
+        
+        IF TpoProducto  IS NULL THEN
+            RAISE_APPLICATION_ERROR(-20001, 'Ingrese un id  válido');  
+        END IF;
+        
+       
+        
+    PKPRODUCTO.PINSERTAR(idProduct,FechaInicio,FechaRetiro,EstadoProducto,EstadoProducto,Cliente,TpoProducto);
+    end pSolicitudNuevoProducto;
 
 --Procedimiento para atender una solicitud de retiro 
 PROCEDURE pSolicitudRetiroProducto( idSolicitud NUMBER, observacion VARCHAR ) IS

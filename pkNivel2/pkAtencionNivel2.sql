@@ -40,18 +40,20 @@ PROCEDURE pSolicitudNuevoProducto(idProduct NUMBER, FechaInicio Date, FechaRetir
        
         
     PKPRODUCTO.PINSERTAR(idProduct,FechaInicio,FechaRetiro,EstadoProducto,EstadoProducto,Cliente,TpoProducto);
-    end pSolicitudNuevoProducto;
+end pSolicitudNuevoProducto;
 
 --Procedimiento para atender una solicitud de retiro 
-PROCEDURE pSolicitudRetiroProducto( idSolicitud NUMBER, observacion VARCHAR ) IS
+PROCEDURE pSolicitudRetiroProducto(idSolicitud NUMBER, observacion VARCHAR) IS
 solic SOLICITUD%rowtype;
 BEGIN
          
         IF idSolicitud IS NULL THEN
         RAISE_APPLICATION_ERROR (-20001, 'ingrese el id de la solicitud');
+         END IF;
         
         IF observacion IS NULL THEN
         RAISE_APPLICATION_ERROR (-20001, 'ingrese observacion de la solicitud');
+         END IF;
         
         solic := PKSOLICITUD.FCONSULTARSOLICITUD(idSolicitud);
         
@@ -72,12 +74,15 @@ BEGIN
          
         IF idSolicitud IS NULL THEN
         RAISE_APPLICATION_ERROR (-20001, 'ingrese el id de la solicitud');
+        END IF; 
         
         IF observacion IS NULL THEN
         RAISE_APPLICATION_ERROR (-20001, 'ingrese observacion de la solicitud');
+        END IF; 
         
         IF estado IS NULL THEN
         RAISE_APPLICATION_ERROR (-20001, 'ingrese un estado para la solicitud');
+        END IF; 
         
         --obtiene la solicitud
         solic := PKSOLICITUD.FCONSULTARSOLICITUD(idSolicitud);        

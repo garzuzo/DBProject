@@ -46,6 +46,7 @@ public class JFRegistro extends JFrame implements ActionListener {
 	
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
+		setSize(700,800);
 	}
 	
 	@Override
@@ -63,7 +64,7 @@ public class JFRegistro extends JFrame implements ActionListener {
 				pCliente.repaint();
 				this.repaint();
 				this.revalidate();
-		this.pack();
+	//	this.pack();
 				//pCliente.setVisible(true);
 			
 			}
@@ -72,10 +73,10 @@ public class JFRegistro extends JFrame implements ActionListener {
 					remove(pCliente);
 				if(pSolicitud!=null)
 				remove(pSolicitud);
-				pSolicitud=new PanelSolicitud();
+				pSolicitud=new PanelSolicitud(this);
 				add(pSolicitud, BorderLayout.CENTER);
 				this.revalidate();
-				this.pack();
+			
 			}	
 		}
 	}

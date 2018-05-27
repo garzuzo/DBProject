@@ -26,7 +26,7 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 		if(e.getActionCommand().equals("registro")) {
 			jfRegistro = new JFRegistro(this);
 		jfRegistro.setVisible(true);
-		jfRegistro.setSize(500,700);
+		jfRegistro.setSize(1100,700);
 		}
 	}
 	

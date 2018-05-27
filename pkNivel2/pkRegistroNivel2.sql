@@ -1,11 +1,11 @@
 --especificación paquete segundo nivel
 
 CREATE OR REPLACE PACKAGE pkRegistroNivel2 AS
-PROCEDURE registrarSolicitudCreacion(id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER,tiposolicitud_id_tipo_s NUMBER,funcionario_id_funcionario NUMBER,producto_id_producto NUMBER);
-PROCEDURE solicitudModificar();
-PROCEDURE solicitudDanio();
-PROCEDURE solicitudReclamo();
-PROCEDURE solicitudCancelacion();
+PROCEDURE pRegistrarSolicitudCreacion(id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER,tiposolicitud_id_tipo_s NUMBER,funcionario_id_funcionario NUMBER,producto_id_producto NUMBER);
+PROCEDURE pSolicitudModificar(id_producto NUMBER, id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER);
+PROCEDURE pSolicitudDanio();
+PROCEDURE pSolicitudReclamo();
+PROCEDURE pSolicitudCancelacion();
 END pkRegistroNivel2;
 
 --cuerpo paquete segundo nivel
@@ -16,7 +16,7 @@ numProductos NUMBER;
 numActual NUMBER;
 --registra solicitud de creación
 --se verifica que el cliente existe. Se crea un producto "falso". Se crea la solicitud. 
-PROCEDURE registrarSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pRegistrarSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 
 BEGIN 
 rcCliente := pkCliente.fBuscarCliente(cliente_cedula);
@@ -32,10 +32,10 @@ END IF;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de creación.'||SQLERRM);
-END registrarSolicitudCreacion;
+END pRegistrarSolicitudCreacion;
 
 --
-PROCEDURE solicitudModificar(id_producto NUMBER, id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pSolicitudModificar(id_producto NUMBER, id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
 rcCliente := pkCliente.fBuscarCliente(cliente_cedula);
 rcProducto := pkProducto.fBuscarProducto(id_producto);
@@ -45,23 +45,23 @@ END IF;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de modificación de un producto.'||SQLERRM);
-END solicitudModificar;
+END pSolicitudModificar;
 
-PROCEDURE solicitudCancelacion() IS
+PROCEDURE pSolicitudCancelacion() IS
 BEGIN
 
 
-END solicitudCancelacion;
+END pSolicitudCancelacion;
 
-PROCEDURE solicitudDanio()IS
+PROCEDURE pSolicitudDanio()IS
 BEGIN
 
 
-END solicitudDanio;
+END pSolicitudDanio;
 
-PROCEDURE solicitudReclamo()IS
+PROCEDURE pSolicitudReclamo()IS
 BEGIN
 
-END solicitudReclamo;
+END pSolicitudReclamo;
 
 END pkRegistroNivel2;

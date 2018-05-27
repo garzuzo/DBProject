@@ -4,6 +4,9 @@ import java.awt.FlowLayout;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -12,8 +15,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class PanelSCreacion extends JPanel implements ActionListener {
-
-
+	
 	private PanelSolicitud ps;
 
 	private TextArea txtObservacion;
@@ -43,13 +45,19 @@ public class PanelSCreacion extends JPanel implements ActionListener {
 
 		if (e.getActionCommand().equals("crear")) {
 
-			String cedula = ps.getTxtCedulaCliente().getText();
+			int cedula = Integer.parseInt(ps.getTxtCedulaCliente().getText());
 
-			String tipo = (String) ps.getCbTipoProducto().getSelectedItem();
+			String tipoProd = (String) ps.getCbTipoProducto().getSelectedItem();
 
 			String observacion = txtObservacion.getText();
+			
+			Calendar cal= Calendar.getInstance();
+			
+			java.sql.Date fechaSol= new java.sql.Date(cal.getTimeInMillis());
+			
+			ps.insertarSolicitud(20,25, observacion, fechaSol, "PENDIENTE", cedula);
 
-			System.out.println(cedula+"\n"+tipo+"\n"+observacion);
+			System.out.println(cedula+"\n"+tipoProd+"\n"+observacion);
 		}
 	}
 }

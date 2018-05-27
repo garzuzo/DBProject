@@ -5,6 +5,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class PanelCliente extends JPanel implements ActionListener {
 
@@ -12,7 +15,7 @@ public class PanelCliente extends JPanel implements ActionListener {
 	private JButton btnRegistrar;
 
 	private InterfazPrincipal interfaz;
-	public static final String REGISTRAR = "REGISTRAR";
+	public static final String REGISTRAR = "Registrar";
 
 	public PanelCliente(InterfazPrincipal i) {
 		interfaz = i;
@@ -43,9 +46,9 @@ public class PanelCliente extends JPanel implements ActionListener {
 		pAux.add(txtDir);
 		add(pAux, BorderLayout.CENTER);
 
-		btnRegistrar = new JButton("Registrar");
+		btnRegistrar = new JButton(REGISTRAR);
 		btnRegistrar.addActionListener(this);
-		btnRegistrar.setActionCommand("registrar");
+		btnRegistrar.setActionCommand(REGISTRAR);
 
 		add(btnRegistrar, BorderLayout.SOUTH);
 		this.repaint();
@@ -57,11 +60,28 @@ public class PanelCliente extends JPanel implements ActionListener {
 		String evento = e.getActionCommand();
 		if (evento.equals(REGISTRAR)) {
 
-			String cedula = txtCedula.getText();
+			int cedula;
+			
+			if(txtCedula.getText()==null||txtCedula.getText().trim().equals("")) {
+				cedula=-1;
+			}else {
+				cedula = Integer.parseInt(txtCedula.getText());
+			}
+			
 			String nombre = txtNombre.getText();
-			String fechaNacimiento = txtFechaN.getText();
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+			Date fecha=null;
+			try {
+				fecha =  formatter.parse(txtFechaN.getText());
+			} catch (ParseException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			java.sql.Date sqlDate = new java.sql.Date(fecha.getTime());
 			String direccion = txtDir.getText();
-			String telefono = txtTelefono.getText();
+			int telefono = Integer.parseInt(txtTelefono.getText());
+			
+			interfaz.insertarCliente(cedula, nombre, direccion, sqlDate, telefono);
 
 		}
 

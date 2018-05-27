@@ -3,17 +3,22 @@ package Interfaz;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Date;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+import Mundo.Cliente;
+
 public class PanelSolicitud extends JPanel implements ActionListener {
 
+	private Cliente cliente;
 	//listener boton seleccionar
 	public static final String SELECCIONAR = "SELECCIONAR";
 
@@ -98,6 +103,17 @@ public class PanelSolicitud extends JPanel implements ActionListener {
 		rbCreacion.setSelected(true);
 		add(pAux, BorderLayout.NORTH);
 
+	}
+	
+	public void insertarSolicitud( int idProd ,int idSol, String observacion, Date fechaSol, String estAt, int cliCed) {
+		try {
+			cliente.insertarSolicitud(idProd,idSol, observacion, fechaSol, estAt, cliCed);
+            JOptionPane.showMessageDialog( null,"El cliente se ha matriculado satisfactoriamente.", "Interfaz cliente", JOptionPane.OK_OPTION );
+
+		} catch (Exception e) {
+			
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz cliente", JOptionPane.ERROR_MESSAGE );
+		}
 	}
 
 	@Override

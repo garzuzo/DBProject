@@ -76,8 +76,9 @@ PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBE
 
 BEGIN
 IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
+--idSOL NUMBER, Observacion Varchar, fecha_solicitud Date,fecha_atencion DATE,estado VARCHAR, cliente NUMBER,tipo_solicitud NUMBER, funcionario NUMBER,idProducto NUMBER
 pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,fecha_inicio, estado_atencion, cliente_cedula,2, 1, id_producto);
-pkProducto.fModificar(ID_PRODUCTO , fecha_inicio , fecha_retiro, estado_producto,cedula_cliente, id_tipo_producto_nuevo );
+pkProducto.pModificar(ID_PRODUCTO , fecha_inicio , null, 'Registrado',cliente_cedula, id_tipo_producto_nuevo );
 END IF;
 END pSolicitudModificacion;
 

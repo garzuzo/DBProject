@@ -34,5 +34,7 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		InterfazPrincipal ip=new InterfazPrincipal();
 		ip.setVisible(true);
+		ip.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		ip.setLocationRelativeTo(null);
 	}
 }

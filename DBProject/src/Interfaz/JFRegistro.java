@@ -33,7 +33,7 @@ public class JFRegistro extends JFrame implements ActionListener {
 		ButtonGroup bg=new ButtonGroup();
 		bg.add(rbRegistroSolicitud);
 		bg.add(rbRegistroCliente);
-		
+		rbRegistroCliente.setSelected(true);
 		btnSeleccion=new JButton("Seleccionar");
 		btnSeleccion.addActionListener(this);
 		btnSeleccion.setActionCommand("seleccionar");
@@ -44,24 +44,38 @@ public class JFRegistro extends JFrame implements ActionListener {
 		
 		add(pAux, BorderLayout.NORTH);
 	
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getActionCommand().equals("seleccionar")) {
-			System.out.println(1);
+			
 			if(rbRegistroCliente.isSelected()) {
+				if(pSolicitud!=null)
+					remove(pSolicitud);
+				if(pCliente!=null)
+				remove(pCliente);
 				pCliente=new PanelCliente(interfaz);
 				this.add(pCliente, BorderLayout.CENTER);
 				pCliente.repaint();
+				this.repaint();
+				this.revalidate();
+		this.pack();
 				//pCliente.setVisible(true);
-				System.out.println(2);
+			
 			}
 			else {
+				if(pCliente!=null)
+					remove(pCliente);
+				if(pSolicitud!=null)
+				remove(pSolicitud);
 				pSolicitud=new PanelSolicitud();
 				add(pSolicitud, BorderLayout.CENTER);
-				System.out.println(3);
+				this.revalidate();
+				this.pack();
 			}	
 		}
 	}

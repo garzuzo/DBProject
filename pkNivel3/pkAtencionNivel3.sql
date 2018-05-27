@@ -31,8 +31,8 @@ END pSolicitudDanosReclamos;
 PROCEDURE pProcesoProgramado is 
 
 BEGIN
-  --Itera sobre todas las solicitudes
-  for i in ( SELECT * FROM SOLICITUD s ) loop
+  --Itera sobre todas las solicitudes que sean de tipo solicitud
+  for i in ( SELECT * FROM SOLICITUD s, TIPOSOLICITUD ts WHERE s.TIPO_SOLICITUD = ts.ID_TIPO_S ) loop
   
   --Cambiar el 20 por la tabla de parametros  
     IF (SYSDATE - i.FECHA_SOLICITUD) > 20 THEN

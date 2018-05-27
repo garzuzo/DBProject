@@ -122,19 +122,19 @@ public class PanelSolicitud extends JPanel implements ActionListener {
 				add(pCreacion, BorderLayout.CENTER);
 
 			} else if (rbModificacion.isSelected()) {
-				pModificacion = new PanelSModificacion();
+				pModificacion = new PanelSModificacion(this);
 				add(pModificacion, BorderLayout.CENTER);
 
 			} else if (rbCancelacion.isSelected()) {
-				pCancelacion = new PanelSCancelacion();
+				pCancelacion = new PanelSCancelacion(this);
 				add(pCancelacion, BorderLayout.CENTER);
 
 			} else if (rbDanio.isSelected()) {
-				pDanio = new PanelSDanio();
+				pDanio = new PanelSDanio(this);
 				add(pDanio, BorderLayout.CENTER);
 
 			} else if (rbReclamo.isSelected()) {
-				pReclamo = new PanelSReclamo();
+				pReclamo = new PanelSReclamo(this);
 				add(pReclamo, BorderLayout.CENTER);
 
 			}

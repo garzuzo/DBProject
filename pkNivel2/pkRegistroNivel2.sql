@@ -101,7 +101,7 @@ pktipo_anomalia.insertar(nombreAnomalia);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
-RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de modificacion de un producto.'||SQLERRM);
+RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de dano de un producto.'||SQLERRM);
 END pSolicitudDanio;
 
 
@@ -131,7 +131,7 @@ pkSolicitud.pInsertarSolicitud(id_solicitud, observacion , fecha_solicitud, null
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
-RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de modificacion de un producto.'||SQLERRM);
+RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de cancelacion de un producto.'||SQLERRM);
 
 END pSolicitudCancelacion;
 

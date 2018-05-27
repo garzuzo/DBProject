@@ -17,7 +17,7 @@ END insertar;
 
 PROCEDURE eliminar(id NUMBER) IS
 BEGIN
-DELETE FROM DANIO d WHERE d.id = id;
+DELETE FROM DANIO d WHERE d.ID_DANIO = id;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al eliminar en la tabla Cliente.'||SQLCODE);
@@ -25,7 +25,7 @@ END eliminar;
 
 PROCEDURE actualizarDescripcion(id NUMBER, descripcion VARCHAR2) IS
 BEGIN
-UPDATE Danio d SET d.DESCRICION_PROBLEMA = descripcion WHERE d.ID= id;
+UPDATE Danio d SET d.DESCRICION_PROBLEMA = descripcion WHERE d.ID_DANIO= id;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al actualizar el nombre de un registro en la tabla Cliente.'||SQLCODE);
@@ -42,7 +42,7 @@ dan danio%rowtype;
 BEGIN
 SELECT * into dan
 FROM Danio d
-WHERE d.ID=id;
+WHERE d.ID_DANIO=id;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al consultar un registro en la tabla Cliente.'||SQLERRM);

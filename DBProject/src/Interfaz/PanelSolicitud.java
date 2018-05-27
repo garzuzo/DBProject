@@ -18,13 +18,22 @@ public class PanelSolicitud extends JPanel implements ActionListener {
 	public static final String DANIO = "DANIO";
 	public static final String RECLAMO = "RECLAMO";
 
+	// RadioButtons
 	private JRadioButton rbCreacion;
 	private JRadioButton rbModificacion;
 	private JRadioButton rbCancelacion;
 	private JRadioButton rbDanio;
 	private JRadioButton rbReclamo;
 
+	// cedulaCliente
 	private JTextField txtCedulaCliente;
+
+	// paneles
+	private PanelSCancelacion pCancelacion;
+	private PanelSCreacion pCreacion;
+	private PanelSDanio pDanio;
+	private PanelSModificacion pModificacion;
+	private PanelSReclamo pReclamo;
 
 	public PanelSolicitud() {
 
@@ -60,15 +69,36 @@ public class PanelSolicitud extends JPanel implements ActionListener {
 
 		String evento = e.getActionCommand();
 
+		if (pCancelacion != null)
+			remove(pCancelacion);
+		if (pCreacion != null)
+			remove(pCreacion);
+		if (pDanio != null)
+			remove(pDanio);
+		if (pModificacion != null)
+			remove(pModificacion);
+		if (pReclamo != null)
+			remove(pReclamo);
+
 		if (evento.equals(CREAR)) {
+			pCreacion = new PanelSCreacion();
+			add(pCreacion, BorderLayout.CENTER);
 
 		} else if (evento.equals(MODIFICAR)) {
+			pModificacion = new PanelSModificacion();
+			add(pModificacion, BorderLayout.CENTER);
 
 		} else if (evento.equals(CANCELAR)) {
+			pCancelacion = new PanelSCancelacion();
+			add(pCancelacion, BorderLayout.CENTER);
 
 		} else if (evento.equals(DANIO)) {
+			pDanio = new PanelSDanio();
+			add(pDanio, BorderLayout.CENTER);
 
 		} else if (evento.equals(RECLAMO)) {
+			pReclamo = new PanelSReclamo();
+			add(pReclamo, BorderLayout.CENTER);
 
 		}
 

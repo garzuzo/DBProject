@@ -58,7 +58,7 @@ PROCEDURE pSolicitudReclamo(id_producto NUMBER, id_solicitud NUMBER, observacion
 
 BEGIN
 IF productoExiste(id_producto) THEN
-pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 3, 1, id_producto);
+pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 5, 1, id_producto);
 END IF;
 END pSolicitudReclamo;
 

@@ -20,13 +20,13 @@ BEGIN
 DELETE FROM Producto pro WHERE pro.ID_PRODUCTO = ID_PRODUCTO;
 EXCEPTION
 WHEN OTHERS THEN
-RAISE_APPLICATION_ERROR(-20000,'Error al eliminar en la tabla Cliente.'||SQLERRM);
+RAISE_APPLICATION_ERROR(-20000,'Error al eliminar en la tabla Cliente'||SQLCODE);
 END pBorrar;
 
 
 PROCEDURE pModificar(ID_PRODUCTO NUMBER, fecha_inicio DATE, fecha_retiro DATE, estado_producto VARCHAR2,cedula_cliente NUMBER, tipo_producto NUMBER) IS
 BEGIN
-UPDATE Producto pro SET pro.fecha_inicio = fecha_inicio, pro.fecha_retiro = fecha_retiro, pro.estado_producto= estado_producto, pro.cedula_cliente= cedula_cliente, pro.tipo_producto=tipo_producto WHERE pro.ID_PRODUCTO=ID_PRODUCTO;
+UPDATE Producto pro SET pro.fecha_inicio = fecha_inicio, pro.fecha_retiro = fecha_retiro, pro.estado_producto= estado_producto, pro.cliente_cedula= cedula_cliente, pro.TIPO_PRODUCTO_ID_TIPO_PRODUCTO=tipo_producto WHERE pro.ID_PRODUCTO=ID_PRODUCTO;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al actualizar  un registro en la tabla Producto.'||SQLERRM);

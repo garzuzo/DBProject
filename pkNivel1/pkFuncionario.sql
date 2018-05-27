@@ -13,23 +13,23 @@ BEGIN
 INSERT INTO Funcionario VALUES(id, nombre);
 EXCEPTION
 WHEN OTHERS THEN
-    raise_application_error(-20000, 'Error insertando en tabla Funcionario' ||SQLCODE);
+    raise_application_error(-20000, 'Error insertando un funcionario' ||SQLCODE);
 END insertar;
 
 PROCEDURE eliminar(id NUMBER) IS
 BEGIN
-DELETE FROM Funcionario fun WHERE fun.id = id;
+DELETE FROM Funcionario fun WHERE fun.ID_FUNCIONARIO = id;
 EXCEPTION
 WHEN OTHERS THEN
-    raise_application_error(-20000, 'Error insertando en tabla Funcionario' ||SQLCODE);
+    raise_application_error(-20000, 'Error eliminando un funcionario' ||SQLCODE);
 END eliminar;
 
 PROCEDURE actualizarNombre(id NUMBER, nombre VARCHAR2) IS
 BEGIN
-UPDATE Funcionario fun SET fun.nombre = nombre WHERE fun.id= id;
+UPDATE Funcionario fun SET fun.NOMBRE = nombre WHERE fun.ID_FUNCIONARIO = id;
 EXCEPTION
 WHEN OTHERS THEN
-    raise_application_error(-20000, 'Error insertando en tabla Funcionario' ||SQLCODE);
+    raise_application_error(-20000, 'Error actualizando el nombre de un funcionario' ||SQLCODE);
 END actualizarNombre;
 
 FUNCTION buscarFuncionario(id NUMBER) RETURN funcionario%rowtype IS
@@ -39,12 +39,12 @@ func funcionario%rowtype;
 BEGIN
 SELECT * into func
 FROM Funcionario fun
-WHERE fun.id=id;
+WHERE fun.ID_FUNCIONARIO=id;
 RETURN func;
 
 EXCEPTION
 WHEN OTHERS THEN
-    raise_application_error(-20000, 'Error insertando en tabla Funcionario' ||SQLCODE);
+    raise_application_error(-20000, 'Error buscando un funcionario' ||SQLCODE);
 
 END buscarFuncionario;
 

@@ -7,6 +7,7 @@ PROCEDURE pSolicitudReclamo(id_producto NUMBER, id_solicitud NUMBER, observacion
 
 PROCEDURE pSolicitudDanio(id_producto NUMBER,id_danio NUMBER,id_anomalia NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
 
+PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
 FUNCTION clienteExiste(cliente_cedula NUMBER) RETURN BOOLEAN;
 FUNCTION productoExiste(id_producto NUMBER) RETURN BOOLEAN;
 END pkRegistroN2;
@@ -48,7 +49,7 @@ END pSolicitudCreacion;
 
 PROCEDURE pSolicitudCancelacion(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
-IF productoExiste(id_producto)=TRUE  THEN
+IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
 pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 3, 1, id_producto);
 END IF;
 END pSolicitudCancelacion;
@@ -56,7 +57,7 @@ END pSolicitudCancelacion;
 
 PROCEDURE pSolicitudReclamo(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
-IF productoExiste(id_producto)=TRUE  THEN
+IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
 pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 5, 1, id_producto);
 END IF;
 END pSolicitudReclamo;
@@ -64,9 +65,20 @@ END pSolicitudReclamo;
 
 PROCEDURE pSolicitudDanio(id_producto NUMBER,id_danio NUMBER,id_anomalia NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
-IF productoExiste(id_producto)=TRUE  THEN
+IF productoExiste(id_producto)=TRUE  AND clienteExiste(cliente_cedula)=TRUE THEN
 pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula,4, 1, id_producto);
 pkDanio.pInsertar(id_danio , observacion, id_anomalia,id_solicitud);
 END IF;
 END pSolicitudDanio;
+
+
+PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+
+BEGIN
+IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
+pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,fecha_inicio, estado_atencion, cliente_cedula,2, 1, id_producto);
+pkProducto.fModificar(ID_PRODUCTO , fecha_inicio , fecha_retiro, estado_producto,cedula_cliente, id_tipo_producto_nuevo );
+END IF;
+END pSolicitudModificacion;
+
 END pkRegistroN2;

@@ -26,7 +26,7 @@ public class PanelSModificacion extends JPanel implements ActionListener {
 		cbNuevoProducto.addItem(PanelSolicitud.VOZ);
 		cbNuevoProducto.addItem(PanelSolicitud.DATOS);
 		cbNuevoProducto.addItem(PanelSolicitud.VOZDATOS);
-
+setLayout(new BorderLayout());
 		bCrear = new JButton("modificar producto");
 		bCrear.setActionCommand("modificar");
 		bCrear.addActionListener(this);
@@ -42,7 +42,8 @@ public class PanelSModificacion extends JPanel implements ActionListener {
 		pAuxModificar.add(txtObservacion);
 		pAuxModificar.add(bCrear);
 		add(pAuxCb, BorderLayout.NORTH);
-		add(pAuxModificar, BorderLayout.CENTER);
+		add(new JLabel(""),BorderLayout.CENTER);
+		add(pAuxModificar, BorderLayout.SOUTH);
 		revalidate();
 	}
 

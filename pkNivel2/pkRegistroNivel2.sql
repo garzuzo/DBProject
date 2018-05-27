@@ -14,20 +14,22 @@ declare
 rcCliente Cliente%rowtype;
 numProductos NUMBER;
 numActual NUMBER;
---registra solicitud de creación
---se verifica que el cliente existe. Se crea un producto "falso". Se crea la solicitud. 
+
+--registrar solicitud de creación
 PROCEDURE pRegistrarSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 
 BEGIN 
 rcCliente := pkCliente.fBuscarCliente(cliente_cedula);
-
+--se verifica que el cliente existe
 IF(rcCliente!=NULL)
 SELECT count(*) into numProductos
 FROM Producto;
 --(numProductos, fecha_inicio DATE, fecha_retiro DATE, estado_producto VARCHAR2,cedula_cliente NUMBER, tipo_producto NUMBER
 numActual:= numProductos+1;
-pkProducto.pInsertar(numActual, fecha_solicitud DATE, null, 'no registrado',cedula_cliente NUMBER, tipo_producto NUMBER);
-pkSolicitud.pInsertarSolicitud(id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER,1,1, numActual);
+--se crea un producto
+pkProducto.pInsertar(numActual, fecha_solicitud DATE, null, 'No registrado',cedula_cliente NUMBER, tipo_producto NUMBER);
+--se crea la solicitud de creacion
+pkSolicitud.pInsertarSolicitud(id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, null,estado_atencion VARCHAR, cliente_cedula NUMBER,1,1, numActual);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
@@ -40,7 +42,7 @@ BEGIN
 rcCliente := pkCliente.fBuscarCliente(cliente_cedula);
 rcProducto := pkProducto.fBuscarProducto(id_producto);
 IF(rcCliente!=NULL AND rcProducto!=NULL)
-pkSolicitud.pInsertarSolicitud(id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, fecha_atencion DATE,estado_atencion VARCHAR, cliente_cedula NUMBER,2,1, id_producto);
+pkSolicitud.pInsertarSolicitud(id_solicitud NUMBER, Observacion Varchar, fecha_solicitud Date, null,estado_atencion VARCHAR, cliente_cedula NUMBER,2,1, id_producto);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN

@@ -16,26 +16,22 @@ CREATE OR REPLACE PACKAGE BODY pkRegistroN2 AS
 
 FUNCTION clienteExiste(clientecedula NUMBER) RETURN BOOLEAN IS
 rcClienteE Cliente%rowtype;
-resultado boolean;
 BEGIN
-resultado:= true;
 rcClienteE := pkCliente.fConsultar(clientecedula);
+RETURN TRUE;
 EXCEPTION
 WHEN OTHERS THEN
-resultado:= false;
-RETURN resultado;
+RETURN FALSE;
 END clienteExiste;
 
 FUNCTION productoExiste(idproducto NUMBER) RETURN BOOLEAN IS
 rcProductoE Producto%rowtype;
-resultadoP boolean;
 BEGIN
-resultadoP:= true;
 rcProductoE := pkProducto.fConsultar(idproducto);
+RETURN TRUE;
 EXCEPTION 
 WHEN OTHERS THEN
-resultadoP:= false;
-RETURN resultadoP;
+RETURN FALSE;
 END productoExiste;
 
 PROCEDURE pSolicitudCreacion(tipoproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
@@ -49,6 +45,7 @@ EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de creacion. '||SQLERRM);
 END pSolicitudCreacion;
+
 
 PROCEDURE pSolicitudCancelacion(idproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 BEGIN
@@ -88,7 +85,7 @@ PROCEDURE pSolicitudModificacion(idproducto NUMBER,id_tipo_producto_nuevo NUMBER
 
 BEGIN
 IF productoExiste(idproducto)=TRUE AND clienteExiste(clientecedula)=TRUE THEN
---idSOL NUMBER, Observacion Varchar, fecha_solicitud Date,fecha_atencion DATE,estado VARCHAR, cliente NUMBER,tipo_solicitud NUMBER, funcionario NUMBER,idProducto NUMBER
+
 pkSolicitud.pInsertarSolicitud(idsolicitud, observacion, fechasolicitud,fechainicio, estadoatencion, clientecedula,2, 1, idproducto);
 pkProducto.pModificar(idproducto , fechainicio , null, 'Registrado',clientecedula, id_tipo_producto_nuevo );
 END IF;

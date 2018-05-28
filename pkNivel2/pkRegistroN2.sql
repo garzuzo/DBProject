@@ -1,59 +1,59 @@
 CREATE OR REPLACE PACKAGE pkRegistroN2 AS
-PROCEDURE pSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
+PROCEDURE pSolicitudCreacion(tipoproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
-PROCEDURE pSolicitudCancelacion(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
+PROCEDURE pSolicitudCancelacion(idproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
-PROCEDURE pSolicitudReclamo(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
+PROCEDURE pSolicitudReclamo(idproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
-PROCEDURE pSolicitudDanio(id_producto NUMBER,id_danio NUMBER,id_anomalia NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
+PROCEDURE pSolicitudDanio(idproducto NUMBER,iddanio NUMBER,idanomalia NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
-PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
-FUNCTION clienteExiste(cliente_cedula NUMBER) RETURN BOOLEAN;
-FUNCTION productoExiste(id_producto NUMBER) RETURN BOOLEAN;
+PROCEDURE pSolicitudModificacion(idproducto NUMBER,id_tipo_producto_nuevo NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechainicio DATE,fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
+FUNCTION clienteExiste(clientecedula NUMBER) RETURN BOOLEAN;
+FUNCTION productoExiste(idproducto NUMBER) RETURN BOOLEAN;
 END pkRegistroN2;
 /
 CREATE OR REPLACE PACKAGE BODY pkRegistroN2 AS
 
-FUNCTION clienteExiste(cliente_cedula NUMBER) RETURN BOOLEAN IS
+FUNCTION clienteExiste(clientecedula NUMBER) RETURN BOOLEAN IS
 rcClienteE Cliente%rowtype;
 resultado boolean;
 BEGIN
 resultado:= true;
-rcClienteE := pkCliente.fConsultar(cliente_cedula);
+rcClienteE := pkCliente.fConsultar(clientecedula);
 EXCEPTION
 WHEN OTHERS THEN
 resultado:= false;
 RETURN resultado;
 END clienteExiste;
 
-FUNCTION productoExiste(id_producto NUMBER) RETURN BOOLEAN IS
+FUNCTION productoExiste(idproducto NUMBER) RETURN BOOLEAN IS
 rcProductoE Producto%rowtype;
 resultadoP boolean;
 BEGIN
 resultadoP:= true;
-rcProductoE := pkProducto.fConsultar(id_producto);
+rcProductoE := pkProducto.fConsultar(idproducto);
 EXCEPTION 
 WHEN OTHERS THEN
 resultadoP:= false;
 RETURN resultadoP;
 END productoExiste;
 
-PROCEDURE pSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pSolicitudCreacion(tipoproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 
 BEGIN
-IF clienteExiste(cliente_cedula)=TRUE THEN
-pkProducto.pInsertar(id_solicitud,fecha_solicitud, null, 'No registrado', cliente_cedula, tipo_producto );
-pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 1, 1, id_solicitud);
+IF clienteExiste(clientecedula)=TRUE THEN
+pkProducto.pInsertar(idsolicitud,fechasolicitud, null, 'No registrado', clientecedula, tipoproducto );
+pkSolicitud.pInsertarSolicitud(idsolicitud, observacion, fechasolicitud,null, estadoatencion, clientecedula, 1, 1, idsolicitud);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de creacion. '||SQLERRM);
 END pSolicitudCreacion;
 
-PROCEDURE pSolicitudCancelacion(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pSolicitudCancelacion(idproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 BEGIN
-IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
-pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 3, 1, id_producto);
+IF productoExiste(idproducto)=TRUE AND clienteExiste(clientecedula)=TRUE THEN
+pkSolicitud.pInsertarSolicitud(idsolicitud, observacion, fechasolicitud,null, estadoatencion, clientecedula, 3, 1, idproducto);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
@@ -61,10 +61,10 @@ RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de cancelacion.
 END pSolicitudCancelacion;
 
 
-PROCEDURE pSolicitudReclamo(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pSolicitudReclamo(idproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 BEGIN
-IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
-pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula, 5, 1, id_producto);
+IF productoExiste(idproducto)=TRUE AND clienteExiste(clientecedula)=TRUE THEN
+pkSolicitud.pInsertarSolicitud(idsolicitud, observacion, fechasolicitud,null, estadoatencion, clientecedula, 5, 1, idproducto);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
@@ -72,11 +72,11 @@ RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de reclamo. '||
 END pSolicitudReclamo;
 
 
-PROCEDURE pSolicitudDanio(id_producto NUMBER,id_danio NUMBER,id_anomalia NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pSolicitudDanio(idproducto NUMBER,iddanio NUMBER,idanomalia NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 BEGIN
-IF productoExiste(id_producto)=TRUE  AND clienteExiste(cliente_cedula)=TRUE THEN
-pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,null, estado_atencion, cliente_cedula,4, 1, id_producto);
-pkDanio.pInsertar(id_danio , observacion, id_anomalia,id_solicitud);
+IF productoExiste(idproducto)=TRUE  AND clienteExiste(clientecedula)=TRUE THEN
+pkSolicitud.pInsertarSolicitud(idsolicitud, observacion, fechasolicitud,null, estadoatencion, clientecedula,4, 1, idproducto);
+pkDanio.pInsertar(iddanio , observacion, idanomalia,idsolicitud);
 END IF;
 EXCEPTION
 WHEN OTHERS THEN
@@ -84,13 +84,13 @@ RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de danio. '||SQ
 END pSolicitudDanio;
 
 
-PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
+PROCEDURE pSolicitudModificacion(idproducto NUMBER,id_tipo_producto_nuevo NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechainicio DATE,fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 
 BEGIN
-IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
+IF productoExiste(idproducto)=TRUE AND clienteExiste(clientecedula)=TRUE THEN
 --idSOL NUMBER, Observacion Varchar, fecha_solicitud Date,fecha_atencion DATE,estado VARCHAR, cliente NUMBER,tipo_solicitud NUMBER, funcionario NUMBER,idProducto NUMBER
-pkSolicitud.pInsertarSolicitud(id_solicitud, observacion, fecha_solicitud,fecha_inicio, estado_atencion, cliente_cedula,2, 1, id_producto);
-pkProducto.pModificar(ID_PRODUCTO , fecha_inicio , null, 'Registrado',cliente_cedula, id_tipo_producto_nuevo );
+pkSolicitud.pInsertarSolicitud(idsolicitud, observacion, fechasolicitud,fechainicio, estadoatencion, clientecedula,2, 1, idproducto);
+pkProducto.pModificar(idproducto , fechainicio , null, 'Registrado',clientecedula, id_tipo_producto_nuevo );
 END IF;
 EXCEPTION
 WHEN OTHERS THEN

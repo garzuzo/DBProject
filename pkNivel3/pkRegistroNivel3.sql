@@ -46,7 +46,7 @@ END pSolicitudReclamoN3;
 
 PROCEDURE pSolicitudDanioN3(idproducto NUMBER,iddanio NUMBER,idanomalia NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 BEGIN
-pkRegistroN2.pSolicitudDanio(id_producto ,id_danio ,id_anomalia , id_solicitud , observacion , fecha_solicitud , estado_atencion , cliente_cedula );
+pkRegistroN2.pSolicitudDanio(idproducto ,iddanio ,idanomalia , idsolicitud , observacion , fechasolicitud , estadoatencion , clientecedula );
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de dano. '|| SQLERRM);

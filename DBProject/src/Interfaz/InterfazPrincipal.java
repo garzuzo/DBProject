@@ -1,5 +1,6 @@
 package Interfaz;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,22 +10,34 @@ import java.sql.SQLException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.border.TitledBorder;
 
 import Mundo.Cliente;
 
 public class InterfazPrincipal extends JFrame implements ActionListener{
 
 	private JFRegistro jfRegistro;
+	private InterfazAtencion interAtencion;
 	private JButton btnRegistro;
+	private JButton btnAtencion;
 	private Cliente cliente;
 	
+	public final static String atencion = "Atender";
+	
 	public InterfazPrincipal() {
+		setTitle("Principal");
 		setLayout(new FlowLayout());
+		setPreferredSize(new Dimension(100,100));
+		setResizable(false);
 		setSize(150,150);
 		btnRegistro = new JButton("Registro");
 		btnRegistro.addActionListener(this);
 		btnRegistro.setActionCommand("registro");
+		btnAtencion = new JButton ("Atencion");
+		btnAtencion.addActionListener(this);
+		btnAtencion.setActionCommand(atencion);
 		add(btnRegistro);
+		add(btnAtencion);
 	}
 	
 	@Override
@@ -33,6 +46,13 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 			jfRegistro = new JFRegistro(this);
 		jfRegistro.setVisible(true);
 		jfRegistro.setSize(1100,700);
+		}
+		else if(e.getActionCommand().equals(atencion)) {
+			interAtencion = new InterfazAtencion();
+			
+					
+			
+			
 		}
 	}
 	

@@ -19,21 +19,23 @@ public class VentanaTablaSolicitudes extends JFrame{
 		Object[][] data = new Object [solicitudes.size()] [9];
 		
 		for (int i = 0; i < data.length; i++) {
-			for (int j = 0; j < data[i].length; j++) {
-				if(j==3 || j==2)
+			for (int j = 0; j < data[1].length; j++) {
+				if(j==3 || j==2) {
+					if( solicitudes.get(i)[j]!=null) 
 					data [i] [j] = solicitudes.get(i)[j].substring(0, 10);
-				else
+			
+					
+			}else
 				data [i] [j] = solicitudes.get(i)[j];
-			}
 		}
-		
+		}
 		JTable table = new JTable(data, columnNames);
 		JScrollPane scrollPane = new JScrollPane(table);
 		table.setFillsViewportHeight(true);
 	  
 
 	      getContentPane().add(scrollPane, BorderLayout.CENTER);
-		pack();
+		setSize(800, 900);
 		
 	}
 	

@@ -133,6 +133,7 @@ public class Cliente {
 					rs.getString("fecha_solicitud"), rs.getString("fecha_atencion"), rs.getString("estado_atencion"),
 					rs.getString("cliente_cedula"), rs.getString("tiposolicitud_id_tipo_s"),
 					rs.getString("funcionario_id_funcionario"), rs.getString("producto_id_producto") });
+			System.out.println("Observacion de " + rs.getString("observacion"));
 		}
 
 		return lista;

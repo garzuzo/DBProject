@@ -49,7 +49,7 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 		}
 		else if(e.getActionCommand().equals(atencion)) {
 			interAtencion = new InterfazAtencion();
-			
+			interAtencion.setVisible(true);
 					
 			
 			

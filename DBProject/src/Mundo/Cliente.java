@@ -90,6 +90,18 @@ public class Cliente {
 	    cs.close();
 	}
 	
+//	public String[] filtrarSolicitudes(String x) {
+//		Connection con = registrarDriver();
+//		Statement stmt = con.createStatement();
+//		
+//		CallableStatement cs = null;
+//		cs = con.prepareCall("{call P}");
+//		
+//		 return ;
+//	}
+//	
+	
+	
 	public static void insertarSolicitud(int idProd, int idSol, String observacion, Date fechaSol, String estAt, int cliCed ) throws Exception{
 
 		Connection con=registrarDriver();

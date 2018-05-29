@@ -1,3 +1,4 @@
+
 CREATE OR REPLACE PACKAGE pkRegistroN2 AS
 PROCEDURE pSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
 

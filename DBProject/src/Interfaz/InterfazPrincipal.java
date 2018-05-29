@@ -46,6 +46,9 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 	   public ArrayList<String[]> mostrarClientes() throws SQLException{
 		   return cliente.mostrarClientes();
 	   }
+	   public ArrayList<String[]> mostrarSolicitudes() throws SQLException{
+		   return cliente.mostrarSolicitudes();
+	   }
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {

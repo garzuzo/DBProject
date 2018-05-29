@@ -65,11 +65,11 @@ public class JFRegistro extends JFrame implements ActionListener {
 		pAux.add(btnMostrarSolicitudes);
 		
 		add(pAux, BorderLayout.NORTH);
-		pack();
+	
 	    setResizable(false);
 		//setDefaultCloseOperation(operation);;
 		setLocationRelativeTo(null);
-		setSize(700,800);
+		setSize(1000,800);
 	}
 	
 	@Override
@@ -104,14 +104,27 @@ public class JFRegistro extends JFrame implements ActionListener {
 			else if(e.getActionCommand().equals(MOSTRAR_CLIENTES)) {
 				VentanaTablaClientes VEN;
 				try {
-					JOptionPane.showMessageDialog(null, "La tabla no existe o hay errores en visualizacion",
-							"Error", JOptionPane.WARNING_MESSAGE);
+				
 
 					VEN = new VentanaTablaClientes(interfaz.mostrarClientes());
 					VEN.setVisible(true);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
-					JOptionPane.showMessageDialog(null, "La tabla no existe o hay errores en visualizacion",
+					JOptionPane.showMessageDialog(null, "La tabla Cliente no existe o hay errores en visualizacion",
+							"Error", JOptionPane.WARNING_MESSAGE);
+				}
+				
+				
+			}else if(e.getActionCommand().equals(MOSTRAR_SOLICITUDES)) {
+				VentanaTablaSolicitudes VEN;
+				try {
+				
+
+					VEN = new VentanaTablaSolicitudes(interfaz.mostrarSolicitudes());
+					VEN.setVisible(true);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					JOptionPane.showMessageDialog(null, "La tabla Solicitudes no existe o hay errores en visualizacion",
 							"Error", JOptionPane.WARNING_MESSAGE);
 				}
 				

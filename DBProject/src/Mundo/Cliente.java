@@ -113,7 +113,26 @@ public class Cliente {
 		ArrayList<String[]> lista = new ArrayList<String[]>();
 		while (rs.next()) {
 			lista.add(new String[] { rs.getString("cedula"), rs.getString("nombre"), rs.getString("direccion"),
-					rs.getString("fecha_nacimiento"),rs.getString("telefono") });
+					rs.getString("fecha_nacimiento"), rs.getString("telefono") });
+		}
+
+		return lista;
+	}
+
+	public ArrayList<String[]> mostrarSolicitudes() throws SQLException {
+
+		Connection con = registrarDriver();
+
+		Statement stmt = con.createStatement();
+
+		ResultSet rs = stmt.executeQuery(
+				"SELECT id_solicitud, observacion, fecha_solicitud, fecha_atencion, estado_atencion, cliente_cedula, tiposolicitud_id_tipo_s, funcionario_id_funcionario, producto_id_producto FROM SOLICITUD");
+		ArrayList<String[]> lista = new ArrayList<String[]>();
+		while (rs.next()) {
+			lista.add(new String[] { rs.getString("id_solicitud"), rs.getString("observacion"),
+					rs.getString("fecha_solicitud"), rs.getString("fecha_atencion"), rs.getString("estado_atencion"),
+					rs.getString("cliente_cedula"), rs.getString("tiposolicitud_id_tipo_s"),
+					rs.getString("funcionario_id_funcionario"), rs.getString("producto_id_producto") });
 		}
 
 		return lista;

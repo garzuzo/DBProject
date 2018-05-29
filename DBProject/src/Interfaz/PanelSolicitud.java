@@ -14,11 +14,11 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-import Mundo.Cliente;
+import Mundo.SistemaGestion;
 
 public class PanelSolicitud extends JPanel implements ActionListener {
 
-	private Cliente cliente;
+	private SistemaGestion mundo;
 	//listener boton seleccionar
 	public static final String SELECCIONAR = "SELECCIONAR";
 
@@ -102,19 +102,63 @@ public class PanelSolicitud extends JPanel implements ActionListener {
 		rbGroup.add(rbReclamo);
 		rbCreacion.setSelected(true);
 		add(pAux, BorderLayout.NORTH);
-
 	}
 	
-	public void insertarSolicitud( int idProd ,int idSol, String observacion, Date fechaSol, String estAt, int cliCed) {
+	public void insertarSolicitudCreacion( int tipoProd ,int idSol, String observacion, Date fechaSol, String estAt, int cliCed) {
 		try {
-			cliente.insertarSolicitud(idProd,idSol, observacion, fechaSol, estAt, cliCed);
-            JOptionPane.showMessageDialog( null,"El cliente se ha matriculado satisfactoriamente.", "Interfaz cliente", JOptionPane.OK_OPTION );
+			mundo.insertarSolicitudCreacion(tipoProd,idSol, observacion, fechaSol, estAt, cliCed);
+            JOptionPane.showMessageDialog( null,"La solicitud se ha creado satisfactoriamente.", "Interfaz solicitud", JOptionPane.OK_OPTION );
 
 		} catch (Exception e) {
 			
-            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz cliente", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz solicitud", JOptionPane.ERROR_MESSAGE );
 		}
 	}
+	
+	public void insertarSolicitudCancelacion( int idProd ,int idSol, String observacion, Date fechaSol, String estAt, int cliCed) {
+		try {
+			mundo.insertarSolicitudCancelacion(idProd,idSol, observacion, fechaSol, estAt, cliCed);
+            JOptionPane.showMessageDialog( null,"La solicitud se ha creado satisfactoriamente.", "Interfaz solicitud", JOptionPane.OK_OPTION );
+
+		} catch (Exception e) {
+			
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz solicitud", JOptionPane.ERROR_MESSAGE );
+		}
+	}
+	
+	public void insertarSolicitudReclamo( int idProd ,int idSol, String observacion, Date fechaSol, String estAt, int cliCed) {
+		try {
+			mundo.insertarSolicitudReclamo(idProd,idSol, observacion, fechaSol, estAt, cliCed);
+            JOptionPane.showMessageDialog( null,"La solicitud se ha creado satisfactoriamente.", "Interfaz solicitud", JOptionPane.OK_OPTION );
+
+		} catch (Exception e) {
+			
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz solicitud", JOptionPane.ERROR_MESSAGE );
+		}
+	}
+	
+	public void insertarSolicitudModificacion(int idProd, int tipoProd, int idSol, String observacion, Date fechaSol, String estAt, int cliCed ) {
+		try {
+			mundo.insertarSolicitudModificacion(idProd, tipoProd, idSol, observacion, fechaSol, estAt, cliCed);
+            JOptionPane.showMessageDialog( null,"La solicitud se ha creado satisfactoriamente.", "Interfaz solicitud", JOptionPane.OK_OPTION );
+
+		} catch (Exception e) {
+			
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz solicitud", JOptionPane.ERROR_MESSAGE );
+		}
+	}
+	
+	public void insertarSolicitudDanio(int idProd, int idDanio,int idAnom, int idSol, String observacion, Date fechaSol, String estAt, int cliCed ) {
+		try {
+			mundo.insertarSolicitudDanio(idProd, idDanio, idAnom, idSol, observacion, fechaSol, estAt, cliCed);
+            JOptionPane.showMessageDialog( null,"La solicitud se ha creado satisfactoriamente.", "Interfaz solicitud", JOptionPane.OK_OPTION );
+
+		} catch (Exception e) {
+			
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz solicitud", JOptionPane.ERROR_MESSAGE );
+		}
+	}
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

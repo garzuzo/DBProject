@@ -1,8 +1,6 @@
 --especificacion paquete registro tercer nivel
 CREATE OR REPLACE PACKAGE pkRegistroNivel3 AS
---SE ANADIRAN 2 ATRIBUTOS 
---CODE CODIGO DE LA EXCEPCION
---MSG MENSAJE DE LA EXCEPCION
+
 PROCEDURE pSolicitudCreacionN3(tipoproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
 PROCEDURE pSolicitudCancelacionN3(idproducto NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
@@ -11,7 +9,7 @@ PROCEDURE pSolicitudReclamoN3(idproducto NUMBER, idsolicitud NUMBER, observacion
 
 PROCEDURE pSolicitudDanioN3(idproducto NUMBER,iddanio NUMBER,idanomalia NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
-PROCEDURE pSolicitudModificacionN3(idproducto NUMBER,id_tipo_producto_nuevo NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechainicio DATE,fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
+PROCEDURE pSolicitudModificacionN3(idproducto NUMBER,id_tipo_producto_nuevo NUMBER, idsolicitud NUMBER, observacion VARCHAR,fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER);
 
 
 END pkRegistroNivel3;
@@ -52,9 +50,9 @@ WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de dano. '|| SQLERRM);
 END pSolicitudDanioN3;
 
-PROCEDURE pSolicitudModificacionN3(idproducto NUMBER,id_tipo_producto_nuevo NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechainicio DATE,fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
+PROCEDURE pSolicitudModificacionN3(idproducto NUMBER,id_tipo_producto_nuevo NUMBER, idsolicitud NUMBER, observacion VARCHAR, fechasolicitud DATE, estadoatencion VARCHAR, clientecedula NUMBER) IS
 BEGIN
-pkRegistroN2.pSolicitudModificacion(idproducto ,id_tipo_producto_nuevo , idsolicitud , observacion , fechainicio ,fechasolicitud , estadoatencion , clientecedula );
+pkRegistroN2.pSolicitudModificacion(idproducto ,id_tipo_producto_nuevo , idsolicitud , observacion , fechasolicitud , estadoatencion , clientecedula );
 EXCEPTION
 WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de modificacion. '|| SQLERRM);

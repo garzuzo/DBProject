@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -25,6 +26,7 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 	public final static String atencion = "Atender";
 	
 	public InterfazPrincipal() {
+		cliente = new Cliente();
 		setTitle("Principal");
 		setLayout(new FlowLayout());
 		setPreferredSize(new Dimension(100,100));
@@ -40,12 +42,18 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 		add(btnAtencion);
 	}
 	
+	
+	   public ArrayList<String[]> mostrarClientes() throws SQLException{
+		   return cliente.mostrarClientes();
+	   }
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("registro")) {
 			jfRegistro = new JFRegistro(this);
 		jfRegistro.setVisible(true);
-		jfRegistro.setSize(1100,700);
+	jfRegistro.setLocation(200, 200);
+		
 		}
 		else if(e.getActionCommand().equals(atencion)) {
 			interAtencion = new InterfazAtencion();
@@ -59,11 +67,12 @@ public class InterfazPrincipal extends JFrame implements ActionListener{
 	public void insertarCliente(int cedula, String nombre, String direccion, Date fecha, int telefono) {
 		try {
 			cliente.insertarCliente(cedula, nombre, direccion, fecha, telefono);
-            JOptionPane.showMessageDialog( null,"El cliente se ha matriculado satisfactoriamente.", "Interfaz cliente", JOptionPane.OK_OPTION );
+			JOptionPane.showMessageDialog(null, "El cliente se ha registrado satisfactoriamente");
+          
 
 		} catch (Exception e) {
 			
-            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz cliente", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( null,e.getMessage(), "Interfaz cliente", JOptionPane.OK_OPTION );
 		}
 	}
 	

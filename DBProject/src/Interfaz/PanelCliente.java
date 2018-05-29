@@ -65,21 +65,21 @@ public class PanelCliente extends JPanel implements ActionListener {
 			if(txtCedula.getText()==null||txtCedula.getText().trim().equals("")) {
 				cedula=-1;
 			}else {
-				cedula = Integer.parseInt(txtCedula.getText());
+				cedula = Integer.parseInt(txtCedula.getText().trim());
 			}
 			
-			String nombre = txtNombre.getText();
+			String nombre = txtNombre.getText().trim();
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
 			Date fecha=null;
 			try {
-				fecha =  formatter.parse(txtFechaN.getText());
+				fecha =  formatter.parse(txtFechaN.getText().trim());
 			} catch (ParseException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			java.sql.Date sqlDate = new java.sql.Date(fecha.getTime());
 			String direccion = txtDir.getText();
-			int telefono = Integer.parseInt(txtTelefono.getText());
+			int telefono = Integer.parseInt(txtTelefono.getText().trim());
 			
 			interfaz.insertarCliente(cedula, nombre, direccion, sqlDate, telefono);
 

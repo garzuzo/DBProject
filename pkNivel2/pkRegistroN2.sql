@@ -1,4 +1,3 @@
-
 CREATE OR REPLACE PACKAGE pkRegistroN2 AS
 PROCEDURE pSolicitudCreacion(tipo_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
 
@@ -11,10 +10,12 @@ PROCEDURE pSolicitudDanio(id_producto NUMBER,id_danio NUMBER,id_anomalia NUMBER,
 PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER);
 FUNCTION clienteExiste(cliente_cedula NUMBER) RETURN BOOLEAN;
 FUNCTION productoExiste(id_producto NUMBER) RETURN BOOLEAN;
+
 END pkRegistroN2;
 /
 CREATE OR REPLACE PACKAGE BODY pkRegistroN2 AS
 
+<<<<<<< HEAD
 FUNCTION clienteExiste(cliente_cedula NUMBER) RETURN BOOLEAN IS
 rcClienteE Cliente%rowtype;
 resultado boolean;
@@ -52,6 +53,7 @@ WHEN OTHERS THEN
 RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de creacion. '||SQLERRM);
 END pSolicitudCreacion;
 
+
 PROCEDURE pSolicitudCancelacion(id_producto NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
 IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
@@ -74,6 +76,7 @@ RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de reclamo. '||
 END pSolicitudReclamo;
 
 
+
 PROCEDURE pSolicitudDanio(id_producto NUMBER,id_danio NUMBER,id_anomalia NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
 IF productoExiste(id_producto)=TRUE  AND clienteExiste(cliente_cedula)=TRUE THEN
@@ -86,8 +89,8 @@ RAISE_APPLICATION_ERROR(-20000,'Error al registrar una solicitud de danio. '||SQ
 END pSolicitudDanio;
 
 
-PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 
+PROCEDURE pSolicitudModificacion(id_producto NUMBER,id_tipo_producto_nuevo NUMBER, id_solicitud NUMBER, observacion VARCHAR, fecha_inicio DATE,fecha_solicitud DATE, estado_atencion VARCHAR, cliente_cedula NUMBER) IS
 BEGIN
 IF productoExiste(id_producto)=TRUE AND clienteExiste(cliente_cedula)=TRUE THEN
 --idSOL NUMBER, Observacion Varchar, fecha_solicitud Date,fecha_atencion DATE,estado VARCHAR, cliente NUMBER,tipo_solicitud NUMBER, funcionario NUMBER,idProducto NUMBER

@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4777C528-5922-E0EA-09C4-F31F4F0F2D5D" name="tipo_producto">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:17:04 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_tipo_producto" id="897B7512-C42D-1615-2E85-23797DE5390F">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:17:13 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_tipo_producto" id="FA71C842-0E79-47A7-72AA-813F29B8664D">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:17:25 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6B7D98C7-FEC8-5F81-629F-1D5121AE3210" name="tipo_producto PK">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:17:51 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="44C42BBB-9A8C-8CBC-00B6-84E6419617A7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>897B7512-C42D-1615-2E85-23797DE5390F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

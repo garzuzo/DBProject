@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tipo_producto-producto" directorySegmentName="seg_0" id="572E2382-55EC-6E17-D95C-E311075CAB2D">
+<createdBy>Juan</createdBy>
+<createdTime>2018-04-30 19:33:27 UTC</createdTime>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<engineerTo>
+<item key="832D770D-A703-7C95-7E97-E9C8AB5647D2" value="true"/>
+</engineerTo>
+<sourcePk>6B7D98C7-FEC8-5F81-629F-1D5121AE3210</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4777C528-5922-E0EA-09C4-F31F4F0F2D5D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B31DFFAC-6A16-E22E-BFA6-D85BD20609BF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

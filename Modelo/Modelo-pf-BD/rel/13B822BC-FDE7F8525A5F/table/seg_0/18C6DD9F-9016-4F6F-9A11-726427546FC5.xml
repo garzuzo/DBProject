@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18C6DD9F-9016-4F6F-9A11-726427546FC5" name="Cliente">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>9A8C2A3F-5C97-8947-90EB-171E77A752FE</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cedula" id="8EE99E9A-7D7B-67F9-E439-7E4C6DF34B4D">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>3C0BE4CE-6B5B-6DFF-EFDD-AD96CBEEEDB2</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="E4028067-B581-DE0E-BEF4-22F17DD96A83">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>238BFA0E-EA7F-08AD-B5A6-66DFD160562E</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Direccion" id="E66DBF92-C4E1-A35A-0994-12EF9F1EF69E">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>1B662F92-AE0E-30E6-4ED8-75E79A40FC64</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaNacimiento" id="A7CE7C80-DC1C-D497-B3B4-61600310543C">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>1FD59120-5EBB-B778-190C-B3A0CEDE4E85</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="7659CF42-D442-21BE-80B2-A9AC90F79B72">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>F58A36EC-57FD-E867-2CB2-AE0C35E50DA7</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C4BD90B-A29A-5F05-1BD3-A8004D627530" name="Cliente_PK">
+<createdBy>sami_</createdBy>
+<createdTime>2018-05-22 01:58:06 UTC</createdTime>
+<generatorID>C3B4FDAD-E056-CC1B-7C94-F08CADE89F83</generatorID>
+<ownerDesignName>Modelo-pf-BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EE99E9A-7D7B-67F9-E439-7E4C6DF34B4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
